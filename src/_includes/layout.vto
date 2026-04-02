@@ -4,6 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title || "fermicalva" }}</title>
+  <meta property="og:title" content="{{ title || 'fermicalva' }}">
+  <meta property="og:site_name" content="fermicalva">
+  <meta property="og:url" content="{{ url |> url(true) }}">
+  <meta property="og:type" content="{{ if type === 'post' }}article{{ else }}website{{ /if }}">
+  <meta property="og:description" content="{{ description || 'しょうもない実験の供養場' }}">
+  <meta property="og:locale" content="ja_JP">
+  {{ if og_image }}
+  <meta property="og:image" content="{{ og_image |> url(true) }}">
+  {{ /if }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title || 'fermicalva' }}">
+  <meta name="twitter:description" content="{{ description || 'しょうもない実験の供養場' }}">
   <style>
     :root {
       --bg: #1a1a2e;

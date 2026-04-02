@@ -3,6 +3,7 @@ layout: layout.vto
 title: "Verbalized Sampling 簡易再現実験 — Grok 3モデル比較"
 date: 2026-04-02
 type: post
+description: "Verbalized Sampling 雑実験"
 tags:
   - llm
   - experiment
