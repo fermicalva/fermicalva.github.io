@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title || "felmicalva" }}</title>
+  <style>
+    :root {
+      --bg: #1a1a2e;
+      --surface: #16213e;
+      --text: #e0e0e0;
+      --text-muted: #8892a0;
+      --accent: #e94560;
+      --link: #0f9b8e;
+      --border: #2a2a4a;
+      --code-bg: #0f0f23;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "SF Mono", "Fira Code", "JetBrains Mono", monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    header { margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; }
+    header h1 { font-size: 1.2rem; font-weight: 400; }
+    header h1 a { color: var(--accent); text-decoration: none; }
+    header nav { margin-top: 0.5rem; }
+    header nav a { color: var(--text-muted); text-decoration: none; margin-right: 1rem; font-size: 0.85rem; }
+    header nav a:hover { color: var(--text); }
+    main { min-height: 60vh; }
+    h1 { font-size: 1.4rem; margin: 1.5rem 0 0.8rem; color: var(--text); }
+    h2 { font-size: 1.15rem; margin: 1.3rem 0 0.6rem; color: var(--text); }
+    h3 { font-size: 1rem; margin: 1rem 0 0.5rem; color: var(--text-muted); }
+    p { margin-bottom: 0.8rem; }
+    a { color: var(--link); }
+    ul, ol { margin: 0.5rem 0 1rem 1.5rem; }
+    li { margin-bottom: 0.3rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.85rem; overflow-x: auto; display: block; }
+    th, td { border: 1px solid var(--border); padding: 0.4rem 0.7rem; text-align: left; }
+    th { background: var(--surface); color: var(--text-muted); font-weight: 600; }
+    td { background: var(--bg); }
+    code { background: var(--code-bg); padding: 0.15rem 0.4rem; border-radius: 3px; font-size: 0.9em; }
+    pre { background: var(--code-bg); padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; }
+    pre code { padding: 0; background: none; }
+    blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--text-muted); margin: 1rem 0; }
+    .post-meta { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 1.5rem; }
+    .post-list { list-style: none; margin-left: 0; }
+    .post-list li { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+    .post-list .date { color: var(--text-muted); font-size: 0.8rem; }
+    .post-list a { text-decoration: none; font-weight: 600; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.75rem; }
+    strong { color: var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/">felmicalva</a></h1>
+    <nav>
+      <a href="/">home</a>
+      <a href="/posts/">posts</a>
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    experiments & notes — powered by <a href="https://lume.land/">Lume</a>
+  </footer>
+</body>
+</html>
