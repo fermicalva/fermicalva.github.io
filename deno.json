@@ -2,6 +2,7 @@
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
     "build": "deno task lume",
+    "build:ci": "echo \"import 'lume/cli.ts'\" | deno run -A --frozen -",
     "serve": "deno task lume -- --serve"
   },
   "imports": {
